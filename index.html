@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <meta name="description" content="Aplicativo PWA Diário de Bordo para registro de atividades diárias."/>
+
+  <meta name="theme-color" content="#556b2f"/>
+
+  <link rel="manifest" href="manifest.json"/>
+
+  <link rel="stylesheet" href="style.css"/>
+
+  <title>Diário de Bordo</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Diário de Bordo</h1>
+
+        <form id="entryForm">
+
+            <label for="title">Título</label>
+            <input
+                type="text"
+                id="title"
+                placeholder="Título"
+                required
+            />
+
+            <label for="description">Descrição</label>
+            <textarea
+                id="description"
+                placeholder="Descrição"
+                required
+            ></textarea>
+
+            <label for="date">Data</label>
+            <input
+                type="date"
+                id="date"
+                required
+            />
+
+            <button type="submit">
+                Adicionar
+            </button>
+
+        </form>
+
+        <div id="entries"></div>
+    </div>
+
+  <button id="installBtn" hidden>
+    Instalar App
+  </button>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
